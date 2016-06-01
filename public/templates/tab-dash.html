@@ -1,0 +1,144 @@
+<ion-view view-title="Users">
+  <ion-content class="padding">
+
+    <form name="userForm" novalidate="" ng-submit="submitUser(userForm)">
+
+      <div class="list">
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.firstName.$invalid && userForm.$submitted, 'no-errors' : userForm.firstName.$valid && userForm.$submitted}">
+              <span class="input-label">First name</span>
+              <input type="text" name="firstName" ng-model="user.firstName" required>
+        </label>
+        <div class="error-container" ng-show="userForm.firstName.$error  && userForm.$submitted" ng-messages="userForm.firstName.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.lastName.$invalid && userForm.$submitted, 'no-errors' : userForm.lastName.$valid && userForm.$submitted}">
+              <span class="input-label">Last name</span>
+              <input type="text" name="lastName" ng-model="user.lastName" required>
+        </label>
+        <div class="error-container" ng-show="userForm.lastName.$error  && userForm.$submitted" ng-messages="userForm.lastName.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.userName.$invalid && userForm.$submitted, 'no-errors' : userForm.userName.$valid && userForm.$submitted}">
+              <span class="input-label">Username</span>
+              <input type="text" name="userName" ng-model="user.userName" required>
+        </label>
+        <div class="error-container" ng-show="userForm.userName.$error  && userForm.$submitted" ng-messages="userForm.userName.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.password.$invalid && userForm.$submitted, 'no-errors' : userForm.password.$valid  && userForm.$submitted}">
+              <span class="input-label">Password</span>
+              <input type="password" name="password" ng-model="user.password" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.password.$error && userForm.$submitted" ng-messages="userForm.password.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.confirmPassword.$invalid && userForm.$submitted, 'no-errors' : userForm.confirmPassword.$valid  && userForm.$submitted}">
+              <span class="input-label">Confirm Password</span>
+              <input type="password" name="confirmPassword" ng-model="user.confirmPassword" compare-to="user.password"  required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.confirmPassword.$error && userForm.$submitted" ng-messages="userForm.confirmPassword.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.dateOfBirth.$invalid && userForm.$submitted, 'no-errors' : userForm.dateOfBirth.$valid  && userForm.$submitted}">
+              <span class="input-label">Date of Birth</span>
+              <input type="date" name="dateOfBirth" ng-model="user.dateOfBirth" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.dateOfBirth.$error && userForm.$submitted" ng-messages="userForm.dateOfBirth.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.email.$invalid && userForm.$submitted, 'no-errors' : userForm.email.$valid  && userForm.$submitted}">
+              <span class="input-label">Email</span>
+              <input type="email" name="email" ng-model="user.email" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.email.$error && userForm.$submitted" ng-messages="userForm.email.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.country.$invalid && userForm.$submitted, 'no-errors' : userForm.country.$valid  && userForm.$submitted}">
+              <span class="input-label">Country</span>
+              <input type="text" name="country" ng-model="user.country" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.country.$error && userForm.$submitted" ng-messages="userForm.country.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.state.$invalid && userForm.$submitted, 'no-errors' : userForm.state.$valid  && userForm.$submitted}">
+              <span class="input-label">State</span>
+              <input type="text" name="state" ng-model="user.state" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.state.$error && userForm.$submitted" ng-messages="userForm.state.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.phone.$invalid && userForm.$submitted, 'no-errors' : userForm.phone.$valid  && userForm.$submitted}">
+              <span class="input-label">Phone</span>
+              <input type="number" name="phone" ng-model="user.phone" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.phone.$error && userForm.$submitted" ng-messages="userForm.phone.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+        
+        
+        
+        <label class="item item-input" ng-class="{ 'has-errors' : userForm.mobile.$invalid && userForm.$submitted, 'no-errors' : userForm.mobile.$valid  && userForm.$submitted}">
+              <span class="input-label">Mobile</span>
+              <input type="number" name="mobile" ng-model="user.mobile" required>
+        </label>
+        <div class="error-container last-error-container" ng-show="userForm.mobile.$error && userForm.$submitted" ng-messages="userForm.mobile.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+        
+
+       
+
+      </div>
+
+      <button class="button button-full button-positive" type="submit">Submit</button>
+
+    </form>
+
+    <script id="error-list.html" type="text/ng-template">
+      <div class="error" ng-message="required">
+        <i class="ion-information-circled"></i> This field is required!
+      </div>
+      <div class="error" ng-message="email">
+        <i class="ion-information-circled"></i> The email address is not valid!
+      </div>
+      <div class="error" ng-message="mobile">
+        <i class="ion-information-circled"></i> The mobile number is not valid!
+      </div>
+      <div class="error" ng-message="compareTo">
+        <i class="ion-information-circled"></i> The Password and Confirm Password Does not match!
+    </script>
+
+  </ion-content>
+</ion-view>
